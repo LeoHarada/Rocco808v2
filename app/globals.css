@@ -72,3 +72,9 @@ html {
     box-shadow: -2px 2px 3px #4a4a4a6e;
     text-shadow: -2px 2px 3px #4d4c4c9c;
 }
+
+@media screen and (min-width: 640px) {
+    .music-custom-grid {
+        grid-template-columns: 1.7fr 2fr;
+    }
+}

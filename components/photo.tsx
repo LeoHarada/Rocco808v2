@@ -63,7 +63,7 @@ export const Photo = () => {
                 }}
                 transition={SPRING_OPTIONS}
                 onDragEnd={onDragEnd}
-                className="flex cursor-grab items-center active:cursor-grabbing"
+                className="flex cursor-grab items-center active:cursor-grabbing w-[100vw]"
             >
                 <Images imgIndex={imgIndex} />
             </motion.div>
@@ -94,7 +94,7 @@ const Images: React.FC<ImagesProps> = ({ imgIndex }) => {
                             scale: imgIndex === idx ? 0.95 : 0.85,
                         }}
                         transition={SPRING_OPTIONS}
-                        className="aspect-video w-full shrink-0 rounded-xl bg-neutral-800 object-cover"
+                        className="aspect-video w-screen shrink-0 rounded-xl bg-neutral-800 object-cover"
                     />
                 );
             })}

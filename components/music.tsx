@@ -9,9 +9,12 @@ type Props = {};
 
 const Music = (props: Props) => {
     return (
-        <section id="music" className="w-full h-full flex flex-col sm:flex-row">
-            <div className="display grid gap-10">
-                <div className="flex flex-col items-center gap-4 sm:justify-center sm:grid-cols-2">
+        <section
+            id="music"
+            className="w-full h-full flex flex-col sm:flex-row justify-center"
+        >
+            <div className="display grid gap-10 music-custom-grid">
+                <div className="flex flex-col items-center gap-4 sm:justify-center py-16">
                     <h1 className="text-[#c6705e] text-4xl shadow-custom font-bold">
                         NUTHIN 2 PROVE AVAILABLE NOW
                     </h1>
@@ -29,7 +32,7 @@ const Music = (props: Props) => {
                         alt="Nuthin to Prove album cover"
                         src="/albumcover.jpg"
                         id="album-cover"
-                        className="w-[90%] h-auto"
+                        className="w-full h-auto"
                     />
                     <Link
                         className="listen-button"

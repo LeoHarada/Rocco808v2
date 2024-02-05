@@ -6,7 +6,7 @@ const Listen = (props: Props) => {
     return (
         <div>
             <iframe
-                className="rounded-xl w-full"
+                className="rounded-xl w-full sm:h-full"
                 src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO19syJ7?utm_source=generator&theme=0"
                 width={300}
                 height={600}
