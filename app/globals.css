@@ -13,3 +13,57 @@ h1 {
 .listen-button {
     @apply -mt-[5px] border-[2px] border-[#454545] rounded-2xl bg-[#454545] text-white text-base p-[5px];
 }
+
+.selfie {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    margin-bottom: 10%;
+}
+
+.selfie-container {
+    border-radius: 50%;
+    height: 312px;
+    -webkit-tap-highlight-color: transparent;
+    transform: scale(0.48);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 400px;
+}
+
+.selfie-container:hover {
+    transform: scale(0.54);
+}
+
+.selfie-container-inner {
+    clip-path: path(
+        "M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,600 10,504.9341 -80,500 V -200 H 2000 600 Z"
+    );
+    position: relative;
+    transform-origin: 50%;
+}
+
+.selfie-circle {
+    border-radius: 50%;
+    cursor: pointer;
+    height: 380px;
+    left: 10px;
+    pointer-events: none;
+    position: absolute;
+    top: 230px;
+    width: 380px;
+}
+
+.selfie-img {
+    pointer-events: none;
+    position: relative;
+    transform: translateY(20px) scale(1.15);
+    transform-origin: 50% bottom;
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    height: auto;
+}
+
+.selfie-container:hover .selfie-img {
+    transform: translateY(0) scale(1.2);
+}

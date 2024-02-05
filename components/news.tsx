@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { FC } from "react";
 import { motion } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
 
@@ -6,10 +7,7 @@ type Props = {};
 
 const News = (props: Props) => {
     return (
-        <section className="p-8 bg-white">
-            <span className="block text-center text-xl font-medium mb-4">
-                Hover a card
-            </span>
+        <div className="p-8 ">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
                 <Card
                     title="Build"
@@ -43,11 +41,17 @@ const News = (props: Props) => {
                     imgSrc="https://images.unsplash.com/photo-1547282548-b82b40322759?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
                 />
             </div>
-        </section>
+        </div>
     );
 };
 
-const Card = ({ imgSrc, title, description }) => {
+interface CardProps {
+    imgSrc: string;
+    title: string;
+    description: string;
+}
+
+const Card: React.FC<CardProps> = ({ imgSrc, title, description }) => {
     return (
         <motion.div whileHover="hover" className="w-full h-[300px] relative">
             <div className="h-1/2 p-6 flex flex-col justify-center bg-black">

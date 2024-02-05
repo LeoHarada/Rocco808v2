@@ -1,26 +1,27 @@
+"use client";
 import React from "react";
 import Listen from "./listen";
 import Image from "next/image";
 import Link from "next/link";
+import Button from "./button";
 
 type Props = {};
 
 const Music = (props: Props) => {
     return (
         <section id="music" className="w-full h-full flex flex-col sm:flex-row">
-            <h1>Music</h1>
             <div className="display grid gap-10">
-                <div className="flex flex-col items-center gap-4">
-                    <h2 className="font-MetalMania text-gray-500 text-4xl ">
+                <div className="flex flex-col items-center gap-4 sm:justify-center sm:grid-cols-2">
+                    <h2 className="font-MetalMania text-[#c6705e] text-4xl ">
                         NUTHIN 2 PROVE AVAILABLE NOW
                     </h2>
                     <Link
-                        className="border-[3px] border-black rounded-md bg-white text-black text-base p-4"
+                        className="mb-12"
                         aria-label="Link to Nuthin 2 Prove on Spotify"
                         target="_blank"
                         href="https://open.spotify.com/album/2xUppvyGKyAsYO0BvqCM9D?si=QdcQ_eT6RkOwIO4LIyYKNw"
                     >
-                        BUY NOW
+                        <Button />
                     </Link>
                     <Image
                         width={300}
