@@ -6,10 +6,6 @@ html {
     @apply bg-[#efdbdd];
 }
 
-h1 {
-    @apply font-MetalMania text-[3.5rem] text-[#c6705e];
-}
-
 .listen-button {
     @apply -mt-[5px] border-[2px] border-[#454545] rounded-2xl bg-[#454545] text-white text-base p-[5px];
 }
@@ -66,4 +62,13 @@ h1 {
 
 .selfie-container:hover .selfie-img {
     transform: translateY(0) scale(1.2);
+}
+
+.shadow-custom {
+    text-shadow: -2px 2px 3px rgb(68 66 66 / 50%);
+}
+
+.purchase-button-shadow-custom {
+    box-shadow: -2px 2px 3px #4a4a4a6e;
+    text-shadow: -2px 2px 3px #4d4c4c9c;
 }

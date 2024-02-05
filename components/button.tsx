@@ -1,14 +1,30 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Button = () => {
+export const Button = () => {
     return <WetPaintButton />;
+};
+
+export const YoutubeButton = () => {
+    return <YoutubeWetPaintButton />;
 };
 
 const WetPaintButton = () => {
     return (
-        <button className="group relative rounded bg-[#c6705e] px-4 py-2.5 font-semibold text-white transition-colors hover:bg-[#a05547]">
+        <button className="group relative rounded bg-[#c6705e] px-4 py-2.5 font-semibold text-white transition-colors hover:bg-[#a05547] purchase-button-shadow-custom">
             Purchase
+            <Drip left="10%" height={24} delay={0.5} />
+            <Drip left="30%" height={20} delay={3} />
+            <Drip left="57%" height={10} delay={4.25} />
+            <Drip left="85%" height={16} delay={1.5} />
+        </button>
+    );
+};
+
+const YoutubeWetPaintButton = () => {
+    return (
+        <button className="group relative rounded bg-[#c6705e] px-4 py-2.5 font-semibold text-white transition-colors hover:bg-[#a05547] purchase-button-shadow-custom">
+            See More
             <Drip left="10%" height={24} delay={0.5} />
             <Drip left="30%" height={20} delay={3} />
             <Drip left="57%" height={10} delay={4.25} />
@@ -118,5 +134,3 @@ const Drip: React.FC<DripProps> = ({ left, height, delay }) => {
         </motion.div>
     );
 };
-
-export default Button;

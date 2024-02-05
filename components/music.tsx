@@ -3,7 +3,7 @@ import React from "react";
 import Listen from "./listen";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "./button";
+import { Button } from "./button";
 
 type Props = {};
 
@@ -12,9 +12,9 @@ const Music = (props: Props) => {
         <section id="music" className="w-full h-full flex flex-col sm:flex-row">
             <div className="display grid gap-10">
                 <div className="flex flex-col items-center gap-4 sm:justify-center sm:grid-cols-2">
-                    <h2 className="font-MetalMania text-[#c6705e] text-4xl ">
+                    <h1 className="text-[#c6705e] text-4xl shadow-custom font-bold">
                         NUTHIN 2 PROVE AVAILABLE NOW
-                    </h2>
+                    </h1>
                     <Link
                         className="mb-12"
                         aria-label="Link to Nuthin 2 Prove on Spotify"
@@ -29,6 +29,7 @@ const Music = (props: Props) => {
                         alt="Nuthin to Prove album cover"
                         src="/albumcover.jpg"
                         id="album-cover"
+                        className="w-[90%] h-auto"
                     />
                     <Link
                         className="listen-button"
