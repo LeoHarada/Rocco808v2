@@ -7,7 +7,7 @@ import Contact from "@/components/contact";
 export default function Home() {
     return (
         <>
-            <main className="flex min-h-screen flex-col items-center justify-between text-center">
+            <main className="flex px-4 min-h-screen flex-col items-center justify-between text-center">
                 <Music />
                 <About />
                 <Video />

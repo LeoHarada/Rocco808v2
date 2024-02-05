@@ -11,6 +11,9 @@ const config: Config = {
             fontFamily: {
                 MetalMania: ["Metal Mania", "cursive"],
             },
+            screens: {
+                xs: "376px",
+            },
         },
     },
     plugins: [],

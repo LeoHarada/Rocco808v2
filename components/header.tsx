@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Header = () => {
     return (
-        <div className="grid w-full h-[100vh] place-content-center px-4 py-12">
+        <div className="grid w-full h-[100vh] place-content-center">
             <TiltCard />
         </div>
     );
@@ -56,7 +56,7 @@ const TiltCard = () => {
                 rotateX,
                 rotateY,
             }}
-            className="relative h-96 w-72"
+            className="relative h-[24rem] w-[18rem] xs:w-[24rem] md:h-[31rem] md:w-[30rem] lg:h-[37rem] lg:w-[34rem]"
         >
             <Image
                 src="/transparenthead.png"
@@ -67,13 +67,13 @@ const TiltCard = () => {
                     transform: "translateZ(75px)",
                     transformStyle: "preserve-3d",
                 }}
-                className="absolute inset-4 grid place-content-center w-[70%]"
+                className="absolute ml-8 xs:ml-12 inset-4 grid place-content-center w-[70%]"
             />
             <img
                 src="/signature.png"
                 alt="Signature for header"
                 style={{ transform: "translateZ(50px)" }}
-                className="ml-[78%] mt-[80%] w-[25%]"
+                className="ml-[80%] mt-[86%] w-[23%]"
             />
         </motion.div>
     );
