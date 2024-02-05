@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState, MouseEvent, FC } from "react";
+import React, { useRef, useState, MouseEvent } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 

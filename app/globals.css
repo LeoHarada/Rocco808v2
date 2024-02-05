@@ -9,3 +9,7 @@ html {
 h1 {
     @apply font-MetalMania text-[3.5rem] text-[#c6705e];
 }
+
+.listen-button {
+    @apply -mt-[5px] border-[2px] border-[#454545] rounded-2xl bg-[#454545] text-white text-base p-[5px];
+}
