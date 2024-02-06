@@ -7,15 +7,16 @@ type Props = {};
 
 const Video = (props: Props) => {
     return (
-        <section
+        <div
             id="videos"
-            className="flex flex-col items-center justify-center gap-5"
+            className="flex flex-col items-center justify-center gap-5 mt-20 lg:-mt-28"
         >
-            <h1 className="text-[#c6705e] text-4xl shadow-custom font-bold">
+            <h1 className="text-[#c6705e] text-4xl shadow-custom font-MetalMania">
                 LATEST VIDEO - RAIN CHECK
             </h1>
             <iframe
                 width="100%"
+                className="2xl:w-[600px]"
                 height="500px"
                 src="https://www.youtube.com/embed/oGvBdnpvzgI?si=l4iit4bQy4XdV8im"
                 title="YouTube video player"
@@ -31,7 +32,7 @@ const Video = (props: Props) => {
             >
                 <YoutubeButton />
             </Link>
-        </section>
+        </div>
     );
 };
 

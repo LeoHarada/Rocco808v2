@@ -9,8 +9,10 @@ export default function Home() {
         <>
             <main className="flex px-4 min-h-screen flex-col items-center justify-between text-center">
                 <Music />
-                <About />
-                <Video />
+                <div className="w-full lg:flex lg:flex-row lg:justify-around">
+                    <About />
+                    <Video />
+                </div>
                 <Photo />
                 <Contact />
             </main>

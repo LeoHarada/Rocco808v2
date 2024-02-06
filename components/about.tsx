@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 
@@ -7,18 +8,19 @@ const About = (props: Props) => {
     return (
         <section
             id="about"
-            className="mt-16 h-full w-full flex flex-col sm:flex-row justify-center"
+            className="mt-16 lg:pr-12 h-full w-auto flex flex-col sm:flex-row justify-center"
         >
-            <div className="h-full w-full flex justify-center sm:justify-end">
+            <div className="h-full w-auto flex justify-center sm:justify-end">
                 <Image
                     alt="rocco808 selfie full body"
                     src="/img5.jpg"
                     width={380}
                     height={380}
-                    className="photo-shadow-custom"
+                    className="photo-shadow-custom sm:60vh
+                    "
                 />
             </div>
-            <div className="mt-4 sm:mt-0 sm:flex sm:flex-col sm:items-center sm:text-left">
+            <div className="mt-4 sm:mt-0 flex flex-col items-center sm:text-left">
                 <Image
                     alt="rocco808 selfie header"
                     src="/rocco808.png"
@@ -26,7 +28,7 @@ const About = (props: Props) => {
                     height={380}
                     className="max-w-[100%]"
                 />
-                <p className="text-gray-500 font-semibold sm:max-w-[300px] sm:pl-2">
+                <p className="text-gray-500 font-semibold sm:max-w-[375px] sm:pl-2">
                     Crossing the Pacific Ocean and infusing island culture into
                     hiphop music, Rocco808 is the next stage that Island pop has
                     been cultivating over the last few years. After making the

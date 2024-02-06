@@ -16,7 +16,7 @@ const Music = (props: Props) => {
         >
             <div className="display grid gap-4 music-custom-grid">
                 <div className="flex flex-col items-center gap-4 sm:justify-center py-16">
-                    <h1 className="text-[#c6705e] text-4xl shadow-custom font-bold">
+                    <h1 className="text-[#c6705e] text-4xl shadow-custom font-MetalMania">
                         NUTHIN 2 PROVE AVAILABLE NOW
                     </h1>
                     <Link
@@ -55,8 +55,8 @@ const Music = (props: Props) => {
                     <Listen />
                 </div>
                 <div className="flex flex-col justify-center">
-                    <h2 className="font-MetalMania pb-4 text-[#c6705e] text-3xl">
-                        LATEST HOT NEW SINGLES
+                    <h2 className="font-MetalMania pb-4 text-[#c6705e] shadow-custom text-2xl">
+                        LATEST SINGLES
                     </h2>
                     <News />
                 </div>
