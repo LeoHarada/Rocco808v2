@@ -5,28 +5,20 @@ type Props = {};
 
 const About = (props: Props) => {
     return (
-        <section id="about" className="flex flex-col items-center">
-            <div className="selfie">
-                <div className="selfie-container">
-                    <div className="selfie-container-inner">
-                        <Image
-                            className="selfie-circle"
-                            src="/cartoonbackground.png"
-                            alt="rocco background circle for selfie"
-                            width={380}
-                            height={380}
-                        />
-                        <Image
-                            className="selfie-img"
-                            src="/cartoonrocco.png"
-                            alt="rocco selfie picture"
-                            width={380}
-                            height={380}
-                        />
-                    </div>
-                </div>
+        <section
+            id="about"
+            className="mt-16 h-full w-full flex flex-col sm:flex-row justify-center"
+        >
+            <div className="h-full w-full flex justify-center sm:justify-end">
+                <Image
+                    alt="rocco808 selfie full body"
+                    src="/img5.jpg"
+                    width={380}
+                    height={380}
+                    className="photo-shadow-custom"
+                />
             </div>
-            <div className="flex flex-col justify-center items-center">
+            <div className="mt-4 sm:mt-0 sm:flex sm:flex-col sm:items-center sm:text-left">
                 <Image
                     alt="rocco808 selfie header"
                     src="/rocco808.png"
@@ -34,7 +26,7 @@ const About = (props: Props) => {
                     height={380}
                     className="max-w-[100%]"
                 />
-                <p className="text-lg font-semibold font-mono text-gray-500 p-4">
+                <p className="text-gray-500 font-semibold sm:max-w-[300px] sm:pl-2">
                     Crossing the Pacific Ocean and infusing island culture into
                     hiphop music, Rocco808 is the next stage that Island pop has
                     been cultivating over the last few years. After making the
