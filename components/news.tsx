@@ -2,45 +2,44 @@
 import React, { FC } from "react";
 import { motion } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
+import { Url } from "next/dist/shared/lib/router/router";
 
 type Props = {};
 
 const News = (props: Props) => {
     return (
-        <div className="p-8 ">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
-                <Card
-                    title="Build"
-                    description="We make pretty buildings"
-                    imgSrc="https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
-                />
-                <Card
-                    title="See?"
-                    description="This ones pretty nice"
-                    imgSrc="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
-                />
-                <Card
-                    title="TALL!"
-                    description="We can even do TALL buildings"
-                    imgSrc="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
-                />
+        <div className="grid grid-cols-3 sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            <Card
+                title="Rain Check"
+                imgSrc="https://resources.tidal.com/images/14b557f8/e7ad/4c52/88bb/7889c7465260/320x320.jpg"
+                href="https://music.apple.com/us/album/rain-check-single/1700292288"
+            />
+            <Card
+                title="Rudeboy (cover)"
+                imgSrc="https://resources.tidal.com/images/4ecdca47/21d2/4b11/b0df/11c07ea9b6bd/320x320.jpg"
+                href="https://music.apple.com/us/album/rudeboy-cover-single/1696990807"
+            />
+            <Card
+                title="Patience"
+                imgSrc="https://resources.tidal.com/images/87839d24/1de5/4019/8094/4649464beeec/320x320.jpg"
+                href="https://music.apple.com/us/album/patience-single/1680013111"
+            />
 
-                <Card
-                    title="Wavy"
-                    description="You like wavy buildings?"
-                    imgSrc="https://images.unsplash.com/photo-1598818384697-62330d600309?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
-                />
-                <Card
-                    title="Modern"
-                    description="This one's real blocky"
-                    imgSrc="https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80"
-                />
-                <Card
-                    title="Modular"
-                    description="That is all :)"
-                    imgSrc="https://images.unsplash.com/photo-1547282548-b82b40322759?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
-                />
-            </div>
+            <Card
+                title="GET DOWN LOW"
+                imgSrc="https://resources.tidal.com/images/e06fa31d/b7d8/4844/aa57/767e37bb3717/320x320.jpg"
+                href="https://music.apple.com/us/album/get-down-low-feat-quinton-rampage-jackson-single/1680307835"
+            />
+            <Card
+                title="Sak Pase"
+                imgSrc="https://resources.tidal.com/images/3c95c67c/7ba3/4838/842d/5389216d894f/320x320.jpg"
+                href="https://music.apple.com/us/album/sak-pase-single/1673639564"
+            />
+            <Card
+                title="Favorite New Long Song"
+                imgSrc="https://resources.tidal.com/images/2aa5be26/fed8/4fd7/af51/507c39f196dc/320x320.jpg"
+                href="https://music.apple.com/us/album/favorite-new-love-song-single/1626955509"
+            />
         </div>
     );
 };
@@ -48,21 +47,24 @@ const News = (props: Props) => {
 interface CardProps {
     imgSrc: string;
     title: string;
-    description: string;
+    href: string;
 }
 
-const Card: React.FC<CardProps> = ({ imgSrc, title, description }) => {
+const Card: React.FC<CardProps> = ({ imgSrc, title, href }) => {
     return (
-        <motion.div whileHover="hover" className="w-full h-[300px] relative">
-            <div className="h-1/2 p-6 flex flex-col justify-center bg-black">
-                <h3 className="text-xl mb-2 font-semibold text-white">
+        <motion.div
+            whileHover="hover"
+            whileTap={{ scale: 0.9 }}
+            className="w-[11vh] h-[11vh] xs:w-[13vh] xs:h-[13vh] ms:w-[15vh] ms:h-[15vh] sm:w-[19vw] sm:h-[19vw] relative photo-shadow-custom"
+        >
+            <div className="h-1/2 flex flex-col justify-center bg-black">
+                <h3 className="text-sm sm:text-xl mb-2 font-semibold text-white">
                     {title}
                 </h3>
-                <p className="text-sm font-light text-slate-300">
-                    {description}
-                </p>
             </div>
-            <motion.div
+            <motion.a
+                href={href}
+                target="_blank"
                 variants={{
                     hover: {
                         top: "50%",
@@ -77,9 +79,11 @@ const Card: React.FC<CardProps> = ({ imgSrc, title, description }) => {
                 }}
             />
             <a
-                href="#"
+                href={href}
+                target="_blank"
                 rel="nofollow"
                 className="w-1/2 h-1/2 absolute bottom-0 right-0 z-0 grid place-content-center bg-white text-black hover:text-indigo-500 transition-colors"
+                aria-label={`More about ${title}`}
             >
                 <div className="flex items-center">
                     <span className="text-xs">MORE</span>

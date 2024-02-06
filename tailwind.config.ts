@@ -12,7 +12,8 @@ const config: Config = {
                 MetalMania: ["Metal Mania", "cursive"],
             },
             screens: {
-                xs: "376px",
+                xs: "375px",
+                ms: "425px",
             },
         },
     },

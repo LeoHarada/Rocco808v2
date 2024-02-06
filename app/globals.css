@@ -73,8 +73,16 @@ html {
     text-shadow: -2px 2px 3px #4d4c4c9c;
 }
 
+.other-button-shadow-custom {
+    box-shadow: -2px 2px 3px #4a4a4a6e;
+}
+
+.photo-shadow-custom {
+    box-shadow: -4px 4px 10px #4a4a4a6e;
+}
+
 @media screen and (min-width: 640px) {
     .music-custom-grid {
-        grid-template-columns: 1.7fr 2fr;
+        grid-template-columns: 2fr 1.5fr;
     }
 }

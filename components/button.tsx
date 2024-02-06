@@ -11,7 +11,7 @@ export const YoutubeButton = () => {
 
 const WetPaintButton = () => {
     return (
-        <button className="group relative rounded bg-[#c6705e] px-4 py-2.5 font-semibold text-white transition-colors hover:bg-[#a05547] purchase-button-shadow-custom">
+        <button className="group relative rounded bg-[#c6705e] px-8 py-2.5 xl:text-2xl font-semibold text-white transition-colors hover:bg-[#a05547] purchase-button-shadow-custom">
             Purchase
             <Drip left="10%" height={24} delay={0.5} />
             <Drip left="30%" height={20} delay={3} />

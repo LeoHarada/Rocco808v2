@@ -56,7 +56,7 @@ const TiltCard = () => {
                 rotateX,
                 rotateY,
             }}
-            className="relative h-[24rem] w-[18rem] xs:w-[24rem] md:h-[31rem] md:w-[30rem] lg:h-[37rem] lg:w-[34rem]"
+            className="relative h-[24rem] w-[18rem] xs:w-[23rem] md:h-[31rem] md:w-[30rem] lg:h-[37rem] lg:w-[34rem]"
         >
             <Image
                 src="/transparenthead.png"
@@ -73,7 +73,7 @@ const TiltCard = () => {
                 src="/signature.png"
                 alt="Signature for header"
                 style={{ transform: "translateZ(50px)" }}
-                className="ml-[80%] mt-[86%] w-[23%]"
+                className="ml-[78%] mt-[86%] w-[23%]"
             />
         </motion.div>
     );

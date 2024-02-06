@@ -8,10 +8,10 @@ const NavigationBar = () => {
     const [active, setActive] = useState(false);
 
     return (
-        <>
+        <div className="z-[9999]">
             <HamburgerButton active={active} setActive={setActive} />
             <AnimatePresence>{active && <LinksOverlay />}</AnimatePresence>
-        </>
+        </div>
     );
 };
 
