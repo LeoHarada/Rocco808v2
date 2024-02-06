@@ -9,14 +9,14 @@ const Video = (props: Props) => {
     return (
         <div
             id="videos"
-            className="flex flex-col items-center justify-center gap-5 mt-20 lg:-mt-28"
+            className="flex flex-col items-center justify-center gap-5 mt-20 lg:-mt-40 2xl:-mt-8"
         >
             <h1 className="text-[#c6705e] text-4xl shadow-custom font-MetalMania">
                 LATEST VIDEO - RAIN CHECK
             </h1>
             <iframe
                 width="100%"
-                className="2xl:w-[600px]"
+                className="lg:w-[38vw]"
                 height="500px"
                 src="https://www.youtube.com/embed/oGvBdnpvzgI?si=l4iit4bQy4XdV8im"
                 title="YouTube video player"

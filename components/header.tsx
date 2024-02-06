@@ -15,7 +15,7 @@ const ROTATION_RANGE = 32.5;
 const HALF_ROTATION_RANGE = 32.5 / 2;
 
 const TiltCard = () => {
-    const ref = useRef(null);
+    const ref = useRef<any>(null);
 
     const [rotateX, setRotateX] = useState(0);
     const [rotateY, setRotateY] = useState(0);

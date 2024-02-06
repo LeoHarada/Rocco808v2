@@ -6,7 +6,7 @@ import { Url } from "next/dist/shared/lib/router/router";
 
 type Props = {};
 
-const News = (props: Props) => {
+const Singles = (props: Props) => {
     return (
         <div className="grid grid-cols-3 sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
             <Card
@@ -94,4 +94,4 @@ const Card: React.FC<CardProps> = ({ imgSrc, title, href }) => {
     );
 };
 
-export default News;
+export default Singles;
