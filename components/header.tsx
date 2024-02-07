@@ -68,7 +68,7 @@ const TiltCard = () => {
                     transform: "translateZ(75px)",
                     transformStyle: "preserve-3d",
                 }}
-                className="absolute ml-8 xs:ml-12 inset-4 grid place-content-center w-[70%]"
+                className="absolute ml-8 inset-4 grid place-content-center w-[70%]"
             />
             <Image
                 width={202}
