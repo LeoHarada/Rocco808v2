@@ -9,7 +9,7 @@ const config: Config = {
     theme: {
         extend: {
             fontFamily: {
-                MetalMania: ["Metal Mania", "cursive"],
+                MetalMania: ["MetalMania", "cursive"],
             },
             screens: {
                 xs: "375px",
