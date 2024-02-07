@@ -39,6 +39,7 @@ const Music = (props: Props) => {
                     <Image
                         width={500}
                         height={500}
+                        priority={true}
                         alt="Nuthin to Prove album cover"
                         src="/albumcover.jpg"
                         id="album-cover"
