@@ -16,10 +16,11 @@ const Video = (props: Props) => {
             </h1>
             <iframe
                 width="100%"
-                className="lg:w-[38vw]"
+                className="lg:w-[38vw] photo-shadow-custom z-0"
+                aria-label="Rocco808 Rain Check video on Youtube.com"
                 height="500px"
                 src="https://www.youtube.com/embed/oGvBdnpvzgI?si=l4iit4bQy4XdV8im"
-                title="YouTube video player"
+                title="Rocco808 Rain Check"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen

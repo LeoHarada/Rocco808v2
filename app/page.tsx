@@ -1,7 +1,6 @@
 import Music from "@/components/music";
 import About from "@/components/about";
 import Video from "@/components/video";
-import Contact from "@/components/contact";
 import Features from "@/components/features";
 
 export default function Home() {
@@ -14,7 +13,6 @@ export default function Home() {
                     <Video />
                 </div>
                 <Features />
-                <Contact />
             </main>
         </>
     );

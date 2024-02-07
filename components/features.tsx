@@ -5,7 +5,7 @@ import { FiArrowRight } from "react-icons/fi";
 
 const Features = () => {
     return (
-        <section className="flex flex-col justify-center">
+        <section id="features" className="flex flex-col justify-center mt-12">
             <h1 className="text-[#c6705e] text-[3rem] shadow-custom font-MetalMania">
                 Features
             </h1>
@@ -19,7 +19,7 @@ const Features = () => {
                 <Card
                     heading="Rolling Stone"
                     description="‘Street Fighter’ is Back with New Theme Song ‘Not On The Sidelines’."
-                    imgSrc="https://www.axelspringer.com/data/uploads/2019/04/rollingstone.jpg"
+                    imgSrc="https://1000logos.net/wp-content/uploads/2020/03/Rolling-Stone-emblem.jpg"
                     href="https://www.rollingstone.com/music/music-news/twitch-street-fighter-6-music-video-1364740/"
                 />
                 <Card
@@ -31,7 +31,7 @@ const Features = () => {
                 <Card
                     heading="Real 92.3 LA"
                     description="Rocco808 is Hawaii's Next Rising Artist Pushing Island Trap Music."
-                    imgSrc="https://cdn-profiles.tunein.com/s24698/images/logod.jpg?t=637783041560000000"
+                    imgSrc="https://swagmygear.com/wp-content/uploads/9in-Flyer-Orange-Main.jpg"
                     href="https://real923la.iheart.com/content/2018-12-12-rocco808-is-hawaiis-next-rising-artist-pushing-island-trap-music/"
                 />
             </div>
@@ -48,16 +48,16 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ heading, description, imgSrc, href }) => {
     return (
-        <motion.div
+        <motion.a
+            href={href}
+            target="_blank"
             transition={{
                 staggerChildren: 0.035,
             }}
             whileHover="hover"
-            className="w-full h-64 bg-slate-300 overflow-hidden cursor-pointer group relative"
+            className="w-full h-64 bg-slate-300 overflow-hidden cursor-pointer group relative photo-shadow-custom"
         >
-            <a
-                href={href}
-                target="_blank"
+            <div
                 className="absolute inset-0 saturate-100 md:saturate-0 md:group-hover:saturate-100 group-hover:scale-110 transition-all duration-500"
                 style={{
                     backgroundImage: `url(${imgSrc})`,
@@ -65,18 +65,18 @@ const Card: React.FC<CardProps> = ({ heading, description, imgSrc, href }) => {
                     backgroundPosition: "center",
                 }}
             />
-            <div className="p-4 relative z-20 h-full text-slate-300 group-hover:text-white transition-colors duration-500 flex flex-col justify-between">
+            <div className="p-4 relative h-full text-slate-300 group-hover:text-white transition-colors duration-500 flex flex-col justify-between">
                 <FiArrowRight className="text-3xl group-hover:-rotate-45 transition-transform duration-500 ml-auto" />
                 <div>
-                    <h4>
+                    <h2>
                         {heading.split("").map((l, i) => (
                             <ShiftLetter letter={l} key={i} />
                         ))}
-                    </h4>
+                    </h2>
                     <p>{description}</p>
                 </div>
             </div>
-        </motion.div>
+        </motion.a>
     );
 };
 

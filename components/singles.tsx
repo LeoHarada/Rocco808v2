@@ -55,10 +55,10 @@ const Card: React.FC<CardProps> = ({ imgSrc, title, href }) => {
         <motion.div
             whileHover="hover"
             whileTap={{ scale: 0.9 }}
-            className="w-[11vh] h-[11vh] xs:w-[13vh] xs:h-[13vh] ms:w-[15vh] ms:h-[15vh] sm:w-[19vw] sm:h-[19vw] relative photo-shadow-custom"
+            className="w-[11vh] h-[11vh] xs:w-[13vh] xs:h-[13vh] ms:w-[15vh] ms:h-[15vh] sm:w-[19vw] sm:h-[19vw] relative photo-shadow-custom z-0"
         >
             <div className="h-1/2 flex flex-col justify-center bg-black">
-                <h3 className="text-sm sm:text-xl mb-2 font-semibold text-white">
+                <h3 className="text-sm md:text-xl mb-2 font-semibold text-white">
                     {title}
                 </h3>
             </div>
@@ -77,6 +77,7 @@ const Card: React.FC<CardProps> = ({ imgSrc, title, href }) => {
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                 }}
+                aria-label={`Album cover image for ${title} by Rocco808`}
             />
             <a
                 href={href}

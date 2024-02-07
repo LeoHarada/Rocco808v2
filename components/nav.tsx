@@ -1,5 +1,5 @@
 "use client";
-import { SiInstagram, SiLinkedin, SiTwitter, SiYoutube } from "react-icons/si";
+import { SiInstagram, SiSpotify, SiApple, SiYoutube } from "react-icons/si";
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
@@ -28,7 +28,7 @@ const LinksOverlay = () => {
 
 const LinksContainer = () => {
     return (
-        <motion.div className="space-y-4 p-12 pl-4 md:pl-20">
+        <motion.div className="space-y-4 p-20 flex flex-col items-center gap-12 font-MetalMania">
             {LINKS.map((l, idx) => {
                 return (
                     <NavLink key={l.title} href={l.href} idx={idx}>
@@ -61,7 +61,7 @@ const NavLink: React.FC<NavLinkProps> = ({ children, href, idx }) => {
             }}
             exit={{ opacity: 0, y: -8 }}
             href={href}
-            className="block text-5xl font-semibold text-white hover:underline md:text-7xl"
+            className="block text-5xl font-semibold text-white hover:underline md:text-6xl"
         >
             {children}
         </motion.a>
@@ -84,10 +84,11 @@ const HamburgerButton: React.FC<HamburgerButtonProps> = ({
                 animate={active ? "open" : "closed"}
                 variants={UNDERLAY_VARIANTS}
                 style={{ top: 16, right: 16 }}
-                className="fixed z-10 rounded-xl bg-gradient-to-br from-[#c6705e] to-[#c7634e] shadow-lg shadow-[#c7634e]/20"
+                className="fixed z-10 rounded-xl bg-[#c6705e] shadow-lg shadow-[#c7634e]/20"
             />
 
             <motion.button
+                aria-label="Open navigation button"
                 initial={false}
                 animate={active ? "open" : "closed"}
                 onClick={() => setActive((pv) => !pv)}
@@ -136,29 +137,11 @@ const FooterCTAs = () => {
                             }}
                             exit={{ opacity: 0, y: -8 }}
                         >
-                            <l.Component className="text-xl text-white transition-colors hover:text-violet-300" />
+                            <l.Component className="text-xl text-white transition-colors hover:text-gray-500" />
                         </motion.a>
                     );
                 })}
             </div>
-
-            <motion.button
-                initial={{ opacity: 0, y: 8 }}
-                animate={{
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                        delay: 1.125,
-                        duration: 0.5,
-                        ease: "easeInOut",
-                    },
-                }}
-                exit={{ opacity: 0, y: 8 }}
-                className="absolute bottom-2 right-2 flex items-center gap-2 rounded-full bg-[#c6705e] px-3 py-3 text-4xl uppercase text-white transition-colors hover:bg-white hover:[#c6705e] md:bottom-4 md:right-4 md:px-6 md:text-2xl"
-            >
-                <span className="hidden md:block">contact us</span>{" "}
-                <FiArrowRight />
-            </motion.button>
         </>
     );
 };
@@ -173,43 +156,35 @@ const LINKS = [
         href: "#music",
     },
     {
-        title: "Listen",
-        href: "#listen",
-    },
-    {
         title: "About",
         href: "#about",
     },
     {
         title: "Videos",
-        href: "#about",
+        href: "#videos",
     },
     {
-        title: "Photos",
-        href: "#photo",
-    },
-    {
-        title: "Contact",
-        href: "#contact",
+        title: "Features",
+        href: "#features",
     },
 ];
 
 const SOCIAL_CTAS = [
     {
-        Component: SiTwitter,
-        href: "#",
+        Component: SiSpotify,
+        href: "https://open.spotify.com/artist/22cn3eIorICqfwb4KthMSB?si=HKHqVlZ5ScC7M6rJIhxzkg",
     },
     {
         Component: SiInstagram,
-        href: "#",
+        href: "https://instagram.com/rocco808_",
     },
     {
-        Component: SiLinkedin,
-        href: "#",
+        Component: SiApple,
+        href: "https://music.apple.com/us/artist/rocco808/1097713646",
     },
     {
         Component: SiYoutube,
-        href: "#",
+        href: "https://youtu.be/iPIKfV4UB08",
     },
 ];
 

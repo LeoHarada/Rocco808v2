@@ -59,9 +59,10 @@ const TiltCard = () => {
             className="relative h-[24rem] w-[18rem] xs:w-[23rem] md:h-[31rem] md:w-[30rem] lg:h-[37rem] lg:w-[34rem]"
         >
             <Image
-                src="/transparenthead.png"
-                width={250}
-                height={350}
+                src="/headerpic.png"
+                priority={true}
+                width={550}
+                height={850}
                 alt="Transparent head photo for header"
                 style={{
                     transform: "translateZ(75px)",
@@ -69,7 +70,9 @@ const TiltCard = () => {
                 }}
                 className="absolute ml-8 xs:ml-12 inset-4 grid place-content-center w-[70%]"
             />
-            <img
+            <Image
+                width={202}
+                height={300}
                 src="/signature.png"
                 alt="Signature for header"
                 style={{ transform: "translateZ(50px)" }}

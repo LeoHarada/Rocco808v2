@@ -37,8 +37,8 @@ const Music = (props: Props) => {
                     </Link>
 
                     <Image
-                        width={300}
-                        height={300}
+                        width={500}
+                        height={500}
                         alt="Nuthin to Prove album cover"
                         src="/albumcover.jpg"
                         id="album-cover"

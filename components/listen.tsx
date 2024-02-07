@@ -9,8 +9,8 @@ const Listen = (props: Props) => {
             src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO19syJ7?utm_source=generator&theme=0"
             width={300}
             height={600}
+            title="Rocco808 Spotify Playlist"
             frameBorder={0}
-            allowFullScreen={true}
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
         ></iframe>

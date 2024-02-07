@@ -65,7 +65,7 @@ html {
 }
 
 .shadow-custom {
-    text-shadow: -2px 2px 3px rgb(68 66 66 / 50%);
+    text-shadow: -2px 2px 3px rgb(71 71 71 / var(--tw-text-opacity));
 }
 
 .purchase-button-shadow-custom {

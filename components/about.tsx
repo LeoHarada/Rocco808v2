@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import Links from "./links";
 
 type Props = {};
 
@@ -17,19 +18,20 @@ const About = (props: Props) => {
                 height={380}
                 className="max-w-[100%]"
             />
+            <Links />
             <div className="sm:flex sm:flex-row">
                 <div className="h-full w-auto flex justify-center sm:justify-end">
                     <Image
                         alt="rocco808 selfie full body"
-                        src="/img5.jpg"
+                        src="/artist.jpg"
                         width={380}
-                        height={380}
+                        height={500}
                         className="photo-shadow-custom sm:60vh
                     "
                     />
                 </div>
                 <div className="mt-4 sm:mt-0 flex flex-col items-center sm:text-left">
-                    <p className="text-[#737373] font-extrabold font-mono sm:max-w-[240px] sm:pl-2 -mt-[5px]">
+                    <p className="text-[#474747] font-extrabold font-mono sm:max-w-[256px] sm:pl-2 -mt-[5px]">
                         Crossing the Pacific Ocean and infusing island culture
                         into hiphop music, Rocco808 is the next stage that
                         Island pop has been cultivating over the last few years.
