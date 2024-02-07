@@ -2,36 +2,53 @@
 import { SiInstagram, SiSpotify, SiApple, SiYoutube } from "react-icons/si";
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { FiArrowRight } from "react-icons/fi";
 
 const NavigationBar = () => {
-    const [active, setActive] = useState(false);
+    const [active, setActive] = useState<boolean>(false);
 
     return (
-        <div className="z-[9999]">
+        <div>
             <HamburgerButton active={active} setActive={setActive} />
-            <AnimatePresence>{active && <LinksOverlay />}</AnimatePresence>
+            <AnimatePresence>
+                {active && <LinksOverlay setActive={setActive} />}
+            </AnimatePresence>
         </div>
     );
 };
 
 export default NavigationBar;
 
-const LinksOverlay = () => {
+interface LinksOverlayProps {
+    setActive: (active: boolean) => void;
+}
+
+const LinksOverlay: React.FC<LinksOverlayProps> = ({ setActive }) => {
     return (
         <nav className="fixed right-4 top-4 z-40 h-[calc(100vh_-_32px)] w-[calc(100%_-_32px)] overflow-hidden">
-            <LinksContainer />
+            <LinksContainer setActive={setActive} />
             <FooterCTAs />
         </nav>
     );
 };
 
-const LinksContainer = () => {
+interface LinksContainerProps {
+    setActive: (active: boolean) => void;
+}
+
+const LinksContainer: React.FC<LinksContainerProps> = ({ setActive }) => {
+    const handleNavLinkClick = () => {
+        setActive(false);
+    };
     return (
         <motion.div className="space-y-4 p-20 flex flex-col items-center gap-12 font-MetalMania">
             {LINKS.map((l, idx) => {
                 return (
-                    <NavLink key={l.title} href={l.href} idx={idx}>
+                    <NavLink
+                        key={l.title}
+                        href={l.href}
+                        idx={idx}
+                        onClick={handleNavLinkClick}
+                    >
                         {l.title}
                     </NavLink>
                 );
@@ -44,9 +61,13 @@ interface NavLinkProps {
     children: string;
     href: string;
     idx: number;
+    onClick: () => void;
 }
 
-const NavLink: React.FC<NavLinkProps> = ({ children, href, idx }) => {
+const NavLink: React.FC<NavLinkProps> = ({ children, href, idx, onClick }) => {
+    const handleClick = () => {
+        onClick();
+    };
     return (
         <motion.a
             initial={{ opacity: 0, y: -8 }}
@@ -61,6 +82,7 @@ const NavLink: React.FC<NavLinkProps> = ({ children, href, idx }) => {
             }}
             exit={{ opacity: 0, y: -8 }}
             href={href}
+            onClick={handleClick}
             className="block text-5xl font-semibold text-white hover:underline md:text-6xl"
         >
             {children}
@@ -125,6 +147,7 @@ const FooterCTAs = () => {
                         <motion.a
                             key={idx}
                             href={l.href}
+                            target="_blank"
                             initial={{ opacity: 0, y: -8 }}
                             animate={{
                                 opacity: 1,

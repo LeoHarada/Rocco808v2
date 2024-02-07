@@ -23,8 +23,8 @@ const Features = () => {
                     href="https://www.rollingstone.com/music/music-news/twitch-street-fighter-6-music-video-1364740/"
                 />
                 <Card
-                    heading="Eight Ray Talent Agency"
-                    description="ROCCO808 THE FATHER OF “TROPICAL TRAP” Releases Hot Dance Hall Track."
+                    heading="Eight Ray"
+                    description="THE FATHER OF “TROPICAL TRAP” Releases Hot Dance Hall Track."
                     imgSrc="https://static.wixstatic.com/media/596d62_e1a505931c0042ac97fb4cf38ba7abce~mv2.png/v1/fit/w_2500,h_1330,al_c/596d62_e1a505931c0042ac97fb4cf38ba7abce~mv2.png"
                     href="https://www.eightrayagency.com/post/rocco808-the-father-of-tropical-trap-releases-hot-dance-hall-track"
                 />
@@ -73,7 +73,7 @@ const Card: React.FC<CardProps> = ({ heading, description, imgSrc, href }) => {
                             <ShiftLetter letter={l} key={i} />
                         ))}
                     </h2>
-                    <p>{description}</p>
+                    <p className="font-bolder">{description}</p>
                 </div>
             </div>
         </motion.a>
