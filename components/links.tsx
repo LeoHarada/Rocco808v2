@@ -9,6 +9,7 @@ const Links = (props: Props) => {
         <div className="flex flex-row items-center justify-center gap-2 my-5">
             <motion.a
                 href="https://open.spotify.com/artist/22cn3eIorICqfwb4KthMSB?si=HKHqVlZ5ScC7M6rJIhxzkg"
+                target="_blank"
                 whileHover={{ scale: 1.1, boxShadow: "0 0 24px 0 #c6705e" }}
                 whileTap={{ scale: 0.9 }}
                 className="rounded-full"
@@ -22,6 +23,7 @@ const Links = (props: Props) => {
             </motion.a>
             <motion.a
                 href="https://music.apple.com/us/artist/rocco808/1097713646"
+                target="_blank"
                 whileHover={{ scale: 1.1, boxShadow: "0 0 24px 0 #c6705e" }}
                 whileTap={{ scale: 0.9 }}
                 className="rounded-full"
@@ -35,6 +37,7 @@ const Links = (props: Props) => {
             </motion.a>
             <motion.a
                 href="https://instagram.com/rocco808_"
+                target="_blank"
                 whileHover={{ scale: 1.1, boxShadow: "0 0 24px 0 #c6705e" }}
                 whileTap={{ scale: 0.9 }}
                 className="rounded-full"
@@ -48,6 +51,7 @@ const Links = (props: Props) => {
             </motion.a>
             <motion.a
                 href="https://youtu.be/iPIKfV4UB08"
+                target="_blank"
                 whileHover={{ scale: 1.1, boxShadow: "0 0 24px 0 #c6705e" }}
                 whileTap={{ scale: 0.9 }}
                 className="rounded-full"
